@@ -5,7 +5,7 @@
  * Description: Registers a lot of useful shortcodes
  * Author: The CSSIgniter Team
  * Author URI: https://www.cssigniter.com/
- * Version: 2.4.1
+ * Version: 2.4.2
  * Text Domain: cssigniter-shortcodes
  * Domain Path: languages
  *
@@ -25,7 +25,7 @@
  */
 
 if ( ! defined( 'CI_SHORTCODES_VERSION' ) ) {
-	define( 'CI_SHORTCODES_VERSION', '2.4.1' );
+	define( 'CI_SHORTCODES_VERSION', '2.4.2' );
 }
 
 if ( ! defined( 'CI_SHORTCODES_PLUGIN_INSTALLED' ) ) {
@@ -113,6 +113,12 @@ function ci_shortcodes_demo( $atts, $content, $tag ) {
 		$atts,
 		$tag
 	);
+
+	$allowed_elements = array( 'section', 'div', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
+
+	if ( ! in_array( $atts['element'], $allowed_elements, true ) ) {
+		$atts['element'] = 'div';
+	}
 
 	return sprintf( '<%1$s class="cisc-demo">%2$s</%1$s>', $atts['element'], $content );
 }

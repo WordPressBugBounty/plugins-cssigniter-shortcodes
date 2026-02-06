@@ -1,13 +1,13 @@
 === CSSIgniter Shortcodes ===
-Contributors: anastis, silencerius, tsiger, nvourva, cssigniterteam
+Contributors: cssigniterteam, anastis, silencerius, tsiger
 Plugin Name: CSSIgniter Shortcodes
 Plugin URI: https://www.cssigniter.com/ci-shortcodes/
 Author URI: https://www.cssigniter.com/
 Author: The CSSigniter Team
-Tags: shortcode, shortcodes, button, box, tooltip, separator, blockquote, list, map, google maps, icons
+Tags: button, box, tooltip, separator, blockquote
 Requires at least: 5.0
-Tested up to: 6.4
-Stable tag: 2.4.1
+Tested up to: 6.9
+Stable tag: 2.4.2
 
 This plugin defines and allows you to use a lot of useful shortcodes. Need a button? Sure. A message box? You know we have it.
 
@@ -43,6 +43,9 @@ Quite a few! Check https://www.cssigniter.com/docs/shortcodes/ for complete usag
 1. Some default-styled shortcodes.
 
 == Changelog ==
+
+= 2.4.2 =
+* Fixed authenticated XSS issue. Props Athiwat Tiprasaharn (Jitlada)
 
 = 2.4.1 =
 * Fixed deprecation warning "Required parameter follows optional parameter" in PHP 8
